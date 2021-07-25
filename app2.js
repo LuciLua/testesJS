@@ -35,33 +35,70 @@ function tela(){
     
     pixel.style.width='3vh'
     pixel.style.height='3vh'
+
     pixel.style.background='#00ff00'
+
+    pixel.style.top= 0 + 'px'
+    pixel.style.left= 0 + 'px'    
     
     pixel.style.position='absolute'
-    pixel.style.top='0'
     
     document.body.appendChild(pixel)
     tela.append(pixel)
     
     // movimentos
+    
+    var px = 0
+    var py = 0
 
     document.querySelector('body').addEventListener('keydown', function(event){
         console.info( event.key );
-        var value = 0 
+
+        var up = false
+        var down = false
+        var left = false
+        var right = false
+
+        pixel.style.top=px+'px'
+        pixel.style.left=py+'px'
+
         switch(event.key){
             case 'ArrowUp': //cima
                 pixel.style.background = '#000'
+                up = true
                 break
             case 'ArrowDown': //baixo
                 pixel.style.background = '#fff'
+                down = true
                 break
             case 'ArrowRight': //esquerda
                 pixel.style.background = '#ff0000'
+                left = true
                 break
             case 'ArrowLeft': //direita
                 pixel.style.background = '#ff99ff'
+                right = true
                 break
         }
-    })
+        if(up == true){
+            px--
+            pixel.style.top=+ (px*10) + 'px'
+        }
+
+        if(down == true){
+            px++
+            pixel.style.top=+ (px*10) + 'px'
+        }
+        if(left == true){
+            py++
+            pixel.style.left=+ (py*10) + 'px'
+        }
+        if(right == true){
+            py--
+            pixel.style.left=+ (py*10) + 'px'
+        }
+    }
+    )
+
 
 }
