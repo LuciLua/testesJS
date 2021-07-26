@@ -15,9 +15,10 @@ window.onload = function(){
     const tela = document.createElement('div')
     tela.className='screen'    
         
-    tela.style.width='80vh'
-    tela.style.height='80vh'
-    tela.style.background='#2d2d2d'
+    tela.style.width='700px'
+    tela.style.height='700px'
+    // tela.style.background='#2d2d2d'
+    tela.style.backgroundImage='url(envi.jpg)'
     
     tela.style.display='flex'
     tela.style.alignItems='center'
@@ -33,8 +34,8 @@ window.onload = function(){
     pixel.className='pixel'
     
     
-    pixel.style.width='10vh'
-    pixel.style.height='10vh'
+    pixel.style.width='70px'
+    pixel.style.height='70px'
 
     pixel.style.backgroundImage="url(parado.gif)"
     pixel.style.backgroundSize="100%"
@@ -121,16 +122,16 @@ window.onload = function(){
             px = px - px
         }
 
-        if (px >= 40){
-            px = 40
+        if (px >= 62){
+            px = 62
         }
 
         if(py <= 0){
             py = py - py
         }
 
-        if (py >= 40){
-            py = 40
+        if (py >= 62){
+            py = 62
         }
 
         
