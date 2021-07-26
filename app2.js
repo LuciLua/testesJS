@@ -1,4 +1,4 @@
-function tela(){
+window.onload = function(){
     // body
     document.body.style.display='flex'
     document.body.style.alignItems='center'
@@ -59,8 +59,7 @@ function tela(){
         var left = false
         var right = false
 
-        pixel.style.top=px+'px'
-        pixel.style.left=py+'px'
+
 
         switch(event.key){
             case 'ArrowUp': //cima
@@ -97,8 +96,7 @@ function tela(){
             py--
             pixel.style.left=+ (py*10) + 'px'
         }
-    }
-    )
+    })
 
 
 }
