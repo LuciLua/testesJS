@@ -36,7 +36,7 @@ window.onload = function(){
     pixel.style.width='10vh'
     pixel.style.height='10vh'
 
-    pixel.style.backgroundImage="url(run.gif)"
+    pixel.style.backgroundImage="url(parado.gif)"
     pixel.style.backgroundSize="100%"
 
 
@@ -60,8 +60,11 @@ window.onload = function(){
         var down = false
         var left = false
         var right = false
+
+        var power = false
         
         pixel.style.transform='rotateY(0deg)'
+        pixel.style.backgroundImage="url(parado.gif)"
         switch(event.key){
             case 'ArrowUp': //cima
                 up = true
@@ -70,20 +73,27 @@ window.onload = function(){
                 down = true
                 break
             case 'ArrowRight': //esquerda
+                pixel.style.backgroundImage="url(run.gif)"
                 left = true
                 break
+
             case 'ArrowLeft': //direita
                 right = true
-                pixel.style.transform='rotateY(180deg)'
-                break
+                pixel.style.backgroundImage="url(run.gif)"
+                pixel.style.transform='rotateY(180deg)'                    
+                break  
+            case " ": //power
+                power = true
+                pixel.style.backgroundImage="url(pow.gif)"
+
             }
-            
+           
 
         if(up == true){
             px--
             pixel.style.top=+ (px*10) + 'px'
         }
-
+        
         if(down == true){
             px++
             pixel.style.top=+ (px*10) + 'px'
@@ -91,11 +101,39 @@ window.onload = function(){
         if(left == true){
             py++
             pixel.style.left=+ (py*10) + 'px'
+            console.log(py)
         }
         if(right == true){
             py--
             pixel.style.left=+ (py*10) + 'px'
         }
+        if (power == true){
+            var pw = document.createElement('div')
+            pw.className='power'  
+            pw.textContent='AAAAAA'
+            pw.style.position='absolute'  
+
+            document.body.appendChild(pw)
+            tela.append(pw)
+        }
+
+        if(px <= 0){
+            px = px - px
+        }
+
+        if (px >= 40){
+            px = 40
+        }
+
+        if(py <= 0){
+            py = py - py
+        }
+
+        if (py >= 40){
+            py = 40
+        }
+
+        
     })
 
 
