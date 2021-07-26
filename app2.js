@@ -33,10 +33,12 @@ window.onload = function(){
     pixel.className='pixel'
     
     
-    pixel.style.width='3vh'
-    pixel.style.height='3vh'
+    pixel.style.width='10vh'
+    pixel.style.height='10vh'
 
-    pixel.style.background='#00ff00'
+    pixel.style.backgroundImage="url(run.gif)"
+    pixel.style.backgroundSize="100%"
+
 
     pixel.style.top= 0 + 'px'
     pixel.style.left= 0 + 'px'    
@@ -58,27 +60,25 @@ window.onload = function(){
         var down = false
         var left = false
         var right = false
-
-
-
+        
+        pixel.style.transform='rotateY(0deg)'
         switch(event.key){
             case 'ArrowUp': //cima
-                pixel.style.background = '#000'
                 up = true
                 break
             case 'ArrowDown': //baixo
-                pixel.style.background = '#fff'
                 down = true
                 break
             case 'ArrowRight': //esquerda
-                pixel.style.background = '#ff0000'
                 left = true
                 break
             case 'ArrowLeft': //direita
-                pixel.style.background = '#ff99ff'
                 right = true
+                pixel.style.transform='rotateY(180deg)'
                 break
-        }
+            }
+            
+
         if(up == true){
             px--
             pixel.style.top=+ (px*10) + 'px'
