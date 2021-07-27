@@ -2,4 +2,10 @@
 
 🦄 Tests key map JavaScript
 
-<img src="preview.png">
+<center><img width='300px' height='300px' src="preview.png"></center>
+
+
+
+🦄Draggable JavaScript
+
+<center> <img width='300px' height='300px' src="qc.png"></center>
