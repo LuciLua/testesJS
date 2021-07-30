@@ -40,7 +40,7 @@ span{
 }
 
 .btns{
-    width: 50%;
+    width: calc(50% + 50px);
     height: 120px;
 
     background-color: rgba(0, 0, 0, 0.192);
@@ -98,6 +98,83 @@ span{
 
     color: #eeeeee;
     background-color: rgb(192, 35, 35);
+}
+
+.pts{
+    width: calc(50% + 50px);
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pts p:nth-child(1)::after{
+    content: 'user';
+    position: absolute;
+    bottom: -25px;
+
+    font-size: 13px;
+    font-family: Arial;
+    font-weight: 700;
+
+    padding: 3px 5px 3px 5px;
+    border-radius: 2px;
+
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #eeeeee;
+    background-color: rgb(192, 35, 35);
+}
+
+.pts p:nth-child(3)::after{
+    content: 'comp';
+    position: absolute;
+    bottom: -25px;
+
+    font-size: 13px;
+    font-family: Arial;
+    font-weight: 700;
+
+    padding: 3px 5px 3px 5px;
+    border-radius: 2px;
+
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #eeeeee;
+    background-color: rgb(192, 35, 35);
+}
+
+.pts p, .pts span{
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.733);
+    background-color: rgba(29, 29, 36, 0.575);
+
+    font-family: Arial;
+    margin: 25px 5px 5px 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.363);
+}
+
+.pts span{
+    border: none;
+    background-color: transparent;
 }
 
 footer{
