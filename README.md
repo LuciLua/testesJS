@@ -12,4 +12,4 @@
 
 🦄Press Challenge
 
-<img src="press.png">
+<img src="press2.png">
