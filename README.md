@@ -2,15 +2,15 @@
 
 🦄 Tests key map JavaScript
 
-<center><img width='300px' height='300px' src="preview.png"></center>
+<img src="preview.png">
 
 
 
 🦄Draggable JavaScript
 
-<center> <img width='300px' height='300px' src="qc.png"></center>
+ <img src="qc.png">
 
 
 🦄Press Challenge
 
-<center> <img width='300px' height='300px' src="press.png"></center>
+<img src="press.png">
